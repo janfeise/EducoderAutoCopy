@@ -1,10 +1,10 @@
 {
   "educoder": {
-    "username": "",
-    "password": "",
-    "completeUsername": "",
-    "completePassword": "",
-    "courseName": "机器学习",
+    "username": "未完成账号",
+    "password": "对应密码",
+    "completeUsername": "已完成账号",
+    "completePassword": "对应密码",
+    "courseName": "课程名字",
     "loginUrl": "https://www.educoder.net/"
   },
   "browser": {
@@ -15,6 +15,6 @@
     "pageLoad": 20000,
     "elementWait": 10000,
     "clickTimeout": 8000,
-    "levelWait": 3000
+    "levelWait": "每个关卡等待时间，单位：ms"
   }
 }

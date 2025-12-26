@@ -46,11 +46,17 @@ function loadDotEnv(envPath) {
  */
 function loadConfig() {
   const configPath = path.join(__dirname, "config.json");
-  const envPath = path.join(__dirname, "..", ".env");
+  const envPaths = [
+    path.join(__dirname, "..", ".env"),
+    path.join(process.cwd(), ".env"),
+  ];
 
-  // 1) 加载 .env 到内存（不依赖第三方库）
-  const fileEnv = loadDotEnv(envPath);
-  const env = { ...fileEnv, ...process.env };
+  let mergedFileEnv = {};
+  for (const p of envPaths) {
+    const obj = loadDotEnv(p);
+    mergedFileEnv = { ...mergedFileEnv, ...obj };
+  }
+  const env = { ...mergedFileEnv, ...process.env };
 
   // 2) 尝试加载本地 config.json（如果存在）
   let fileConfig = {};
@@ -134,7 +140,7 @@ function loadConfig() {
     },
   };
 
-  console.log("✅ 配置加载完成：已优先使用环境变量");
+  console.log("✅ 配置加载完成：已优先使用环境变量/.env");
   return config;
 }
 

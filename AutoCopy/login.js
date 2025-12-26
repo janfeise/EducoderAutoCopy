@@ -28,6 +28,12 @@ async function login(page, config, credentials = null) {
     const elementWait = config.timeout.elementWait;
 
     console.log(`👤 正在登录用户: ${maskIdentifier(username)}`);
+    if (!username || !password) {
+      console.error(
+        "❌ 缺少登录凭证，请在环境变量或 .env 中配置 EDUCODER_USERNAME/EDUCODER_PASSWORD"
+      );
+      throw new Error("MISSING_CREDENTIALS");
+    }
 
     // 1. 检查当前是否已经在登录页面 (包含 /login 或 /passport)
     const currentUrl = page.url();
