@@ -4,6 +4,8 @@
 
 ![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-green) ![Playwright](https://img.shields.io/badge/Playwright-%F0%9F%8E%AC-blue)
 
+[演示视频](./演示视频/演示视频.mp4)
+
 <video src="./演示视频/演示视频.mp4" controls width="900"></video>
 
 ## 目录
