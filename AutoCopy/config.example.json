@@ -1,0 +1,20 @@
+{
+  "educoder": {
+    "username": "",
+    "password": "",
+    "completeUsername": "",
+    "completePassword": "",
+    "courseName": "机器学习",
+    "loginUrl": "https://www.educoder.net/"
+  },
+  "browser": {
+    "headless": false,
+    "type": "chromium"
+  },
+  "timeout": {
+    "pageLoad": 20000,
+    "elementWait": 10000,
+    "clickTimeout": 8000,
+    "levelWait": 3000
+  }
+}

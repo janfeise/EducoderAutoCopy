@@ -1,0 +1,16 @@
+AutoCopy/config.json
+.env
+.env.local
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+/文档/
+/tests/
+/学习记录.md
+lab1.js
+mcp.json
